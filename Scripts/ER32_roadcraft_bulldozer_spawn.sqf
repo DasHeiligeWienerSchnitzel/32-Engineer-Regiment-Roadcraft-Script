@@ -31,6 +31,18 @@ _ER32_bulldozer_spawner = [
 		] call ace_interact_menu_fnc_createAction;
 		[_tractor, 1, ["ACE_SelfActions"], _ER32_bulldozer_demolition_activ] call ace_interact_menu_fnc_addActionToObject;
 		
+		_ER32_bulldozer_flatten_active = [
+			"ER32_bulldozer_flatten_aktive",
+			"Start Flattening",
+			"",
+			{
+				params ["_target","_player","_params"];
+				[_target] execVM "ER32_roadcraft_bulldozer_flatten.sqf"
+			},
+			{true}
+		] call ace_interact_menu_fnc_createAction;
+		[_tractor, 1, ["ACE_SelfActions"], _ER32_bulldozer_flatten_active] call ace_interact_menu_fnc_addActionToObject;
+		
 	},
 	{true}
 ] call ace_interact_menu_fnc_createAction;
