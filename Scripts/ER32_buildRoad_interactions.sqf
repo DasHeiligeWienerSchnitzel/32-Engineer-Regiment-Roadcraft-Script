@@ -76,8 +76,8 @@ params ["_fillTruckSwitches","_bulldozer_spawners","_bulldozer_spawnpoints","_fi
 for "_i" from 0 to (count _fillTruckSwitches - 1) do {
 	(_fillTruckSwitches select _i) setObjectTextureGlobal [0,""];
 	_zone = _fillTruckZones select _i;
-	_ER32_roadcraft_sandFiller = [
-		"ER32_roadcraft_sandFiller",
+	_ER32_buildRoad_sandFiller = [
+		"ER32_buildRoad_sandFiller",
 		"Start Filling Truck with Sand",
 		"",
 		{
@@ -90,7 +90,7 @@ for "_i" from 0 to (count _fillTruckSwitches - 1) do {
 		[_zone]
 	] call ace_interact_menu_fnc_createAction;
 	
-	[_fillTruckSwitches select _i, 0, ["ACE_MainActions"], _ER32_roadcraft_sandFiller] call ace_interact_menu_fnc_addActionToObject;
+	[_fillTruckSwitches select _i, 0, ["ACE_MainActions"], _ER32_buildRoad_sandFiller] call ace_interact_menu_fnc_addActionToObject;
 };
 
 //Adds interaction to create bulldozers.
