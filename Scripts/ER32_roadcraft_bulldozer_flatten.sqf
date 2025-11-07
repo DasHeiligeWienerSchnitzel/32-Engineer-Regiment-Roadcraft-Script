@@ -1,37 +1,27 @@
 params ["_vehicle"];
 
-[_vehicle, 1, ["ACE_SelfActions","ER32_bulldozer_flatten_aktive"]] call ace_interact_menu_fnc_removeActionFromObject;
-
-_ER32_bulldozer_flatten_deactive = [
-	"ER32_bulldozer_flatten_deaktive",
-	"Stop Flattening",
-	"",
-	{
-		params ["_target","_player","_params"];
-		[_target, 1, ["ACE_SelfActions","ER32_bulldozer_flatten_deaktive"]] call ace_interact_menu_fnc_removeActionFromObject;
-		_ER32_bulldozer_flatten_active = [
-			"ER32_bulldozer_flatten_aktive",
-			"Start Flattening",
-			"",
-			{
-				params ["_target","_player","_params"];
-				[_target] execVM "ER32_roadcraft_bulldozer_flatten.sqf"
-			},
-			{true}
-		] call ace_interact_menu_fnc_createAction;
-		[_target, 1, ["ACE_SelfActions"], _ER32_bulldozer_flatten_active] call ace_interact_menu_fnc_addActionToObject;
-	},
-	{true}
-] call ace_interact_menu_fnc_createAction;
-[_vehicle, 1, ["ACE_SelfActions"], _ER32_bulldozer_flatten_deactive] call ace_interact_menu_fnc_addActionToObject;
-
-
 _flattenActive = _vehicle getVariable ["ER32_roadcraft_bulldozer_flatten",true];
 
+/*
+Starts to scan for "HumpsDirt" Object and will delete and replace it with "Land_DirtPatch_02_F" texture.
+*/
+
 while {_flattenActive == true} do {
+
+	//Gets relativ forward position to vehicle.
+
 	_posInFrontVehicle = _vehicle getRelPos [5,0];
 	
+	//Gets nearby HumpsDirt in a 5 meter Radius from the vehicle.
+	
 	_nearbyDirtPiles = _vehicle nearObjects ["HumpsDirt",5];
+	
+	/*
+	Now will delete the collected objects and replace it with the dirt texture.
+	If only one object detected it will just take that, but
+	if more than one object was detected, it will delete the closest one.
+	*/
+	
 	if (count _nearbyDirtPiles == 1) then {
 		_dirtPile = _nearbyDirtPiles select 0;
 		_posDirtPile = getPosATL _dirtPile;
