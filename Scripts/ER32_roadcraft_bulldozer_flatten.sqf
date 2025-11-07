@@ -1,6 +1,6 @@
 params ["_vehicle"];
 
-_flattenActive = _vehicle getVariable ["ER32_roadcraft_bulldozer_flatten",true];
+_flattenActive = _vehicle getVariable ["ER32_buildRoad_bulldozer_flatten",true];
 
 /*
 Starts to scan for "HumpsDirt" Object and will delete and replace it with "Land_DirtPatch_02_F" texture.
