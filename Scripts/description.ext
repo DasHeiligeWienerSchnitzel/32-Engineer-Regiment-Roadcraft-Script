@@ -1,0 +1,13 @@
+class CfgFunctions {
+	class ER32 {
+		class BuildRoad {
+			file = "functions"; //folder
+			
+			class activateDemolishment {};
+			class flatten {};
+			class fillTruck {};
+			class sandDropper {};
+			class mpScale {};
+		};
+	};
+};
