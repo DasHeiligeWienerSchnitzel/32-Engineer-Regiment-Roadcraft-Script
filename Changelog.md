@@ -1,3 +1,12 @@
+# Version 1.0
+Release Version with main functions and mp compatibility.
+
+###### Changed
+* Rewritten script to enable multiplayer compatiblity.
+* Rewritten script to use functions properly.
+
+---
+
 # Version 0.9
 
 ###### Added
