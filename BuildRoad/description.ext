@@ -1,7 +1,7 @@
 class CfgFunctions {
 	class ER32 {
 		class BuildRoad {
-			file = "Scripts/functions"; //folder
+			file = "Scripts\functions"; //folder
 			
 			class activateDemolishment {};
 			class flatten {};
