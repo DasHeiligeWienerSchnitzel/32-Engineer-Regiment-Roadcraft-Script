@@ -1,1 +1,1 @@
-execVM "ER32_buildRoad_config.sqf";
+execVM "Scripts/ER32_buildRoad_config.sqf";
