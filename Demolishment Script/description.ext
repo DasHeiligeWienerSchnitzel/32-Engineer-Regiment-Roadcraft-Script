@@ -1,9 +1,0 @@
-class CfgFunctions {
-	class ER32 {
-		class Demolishment {
-			file = "functions"; //folder
-			
-			class activateDemolishment {};
-		};
-	};
-};
