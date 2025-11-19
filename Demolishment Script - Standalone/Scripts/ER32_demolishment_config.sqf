@@ -10,4 +10,4 @@ _bulldozer_spawnpoints = [bulldozer_spawnpoint];
 //-------------------------------------------------------------------------------------------------
 
 
-[_bulldozer_spawners,_bulldozer_spawnpoints] execVM "ER32_demolishment_interactions.sqf";
+[_bulldozer_spawners,_bulldozer_spawnpoints] execVM "Scripts\ER32_demolishment_interactions.sqf";
