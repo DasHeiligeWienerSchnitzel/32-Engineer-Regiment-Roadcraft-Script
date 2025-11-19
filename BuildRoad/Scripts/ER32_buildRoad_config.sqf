@@ -12,4 +12,4 @@ _bulldozer_spawnpoints = [bulldozer_spawnpoint];
 //-------------------------------------------------------------------------------------------------
 
 
-[_fillTruckZones,_fillTruckSwitches,_bulldozer_spawners,_bulldozer_spawnpoints] execVM "ER32_buildRoad_interactions.sqf";
+[_fillTruckZones,_fillTruckSwitches,_bulldozer_spawners,_bulldozer_spawnpoints] execVM "Scripts\ER32_buildRoad_interactions.sqf";
