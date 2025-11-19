@@ -1,2 +1,3 @@
-execVM "ER32_roadcraft_bulldozer_spawn.sqf";
-execVM "ER32_roadcraft_fillTruck.sqf";
+execVM "Scripts/ER32_roadcraft_bulldozer_spawn.sqf";
+execVM "Scripts/ER32_roadcraft_fillTruck.sqf";
+
