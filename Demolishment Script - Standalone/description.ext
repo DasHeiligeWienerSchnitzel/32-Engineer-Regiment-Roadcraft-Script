@@ -1,0 +1,9 @@
+class CfgFunctions {
+	class ER32 {
+		class Demolishment {
+			file = "Scripts\functions"; //folder
+			
+			class activateDemolishment {};
+		};
+	};
+};
