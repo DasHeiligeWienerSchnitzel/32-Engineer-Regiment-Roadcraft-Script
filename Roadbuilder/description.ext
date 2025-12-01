@@ -1,6 +1,6 @@
 class CfgFunctions {
 	class ER32 {
-		class BuildRoad {
+		class Roadbuilder {
 			file = "Scripts\functions"; //folder
 			
 			class roadbuilder_activateDemolishment {};
@@ -10,6 +10,7 @@ class CfgFunctions {
 			class roadbuilder_mpScale {};
 			class roadbuilder_addSandDropperAction {};
 			class roadbuilder_addAndRemoveSandDropperActions {};
+			class roadbuilder_removeSandDropperAction {};
 		};
 	};
 };
